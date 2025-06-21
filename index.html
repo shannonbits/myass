@@ -3,56 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>myass - Premium Minecraft Utility Mod</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <style>
-        :root {
-            --primary: #ff66b2;
-            --secondary: #9933ff;
-        }
-        body {
-            background: #121212;
-            color: white;
-            font-family: 'Segoe UI', sans-serif;
-        }
-        .header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            padding: 2rem;
-            text-align: center;
-        }
-        .logo {
-            font-size: 4rem;
-            font-weight: 900;
-            margin-bottom: 1rem;
-        }
-        .subtitle {
-            font-size: 1.5rem;
-            opacity: 0.8;
-        }
-        .cta-button {
-            background: var(--primary);
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 2rem;
-        }
-    </style>
+    <title>myass | Minecraft Client Platform</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div class="header">
-        <div class="logo">myass</div>
-        <div class="subtitle">Premium Minecraft Utility Mod</div>
-        <a href="citric.html" class="cta-button">Get Citric@myass</a>
-    </div>
+    <nav>
+        <span class="platform-name">myass</span>
+        <a href="#beta" class="nav-button">Apply for Beta</a>
+    </nav>
 
-    <div class="features">
-        <h2>Why use myass?</h2>
-        <div class="feature">
-            <h3>citric@myass</h3>
-            <p>The most advanced utility mod that sticks to targets like glue</p>
+    <header>
+        <h1>myass <span class="beta-badge">BETA</span></h1>
+        <p class="tagline">A platform for <em>select</em> Minecraft utilities</p>
+    </header>
+
+    <section class="client-showcase">
+        <div class="client-card" onclick="location.href='citric.html'">
+            <h2>citric<span class="at-myass">@myass</span></h2>
+            <p class="client-description">Precision combat utility for 1.8.9</p>
+            <div class="status-badge closed-beta">CLOSED BETA</div>
         </div>
-        <!-- More features here -->
-    </div>
+    </section>
+
+    <section id="beta" class="beta-application">
+        <h2>Want citric<span class="at-myass">@myass</span>?</h2>
+        <p>Complete the test for beta access:</p>
+        <ol class="test-instructions">
+            <li>Join our Discord</li>
+            <li>Solve the captcha</li>
+            <li>Complete the verification form</li>
+        </ol>
+        <button class="discord-button">Join Discord</button>
+    </section>
+
+    <footer>
+        <p>myass platform © 2024 | Not affiliated with Mojang or Microsoft</p>
+        <p class="disclaimer">All clients are provided "as is" for educational purposes</p>
+    </footer>
 </body>
 </html>
