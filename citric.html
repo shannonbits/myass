@@ -4,47 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>citric@myass | Precision Combat Utility</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap">
+    <style>
+        /* Shared styles from index.html */
+        :root {
+            --primary: #FF66B2;
+            --secondary: #9933FF;
+            --dark: #0D0D12;
+            --darker: #08080C;
+            --light: #F0F0F5;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--dark);
+            color: var(--light);
+            margin: 0;
+            line-height: 1.6;
+        }
+        
+        /* Client-specific styles */
+        .client-header {
+            padding: 120px 10% 60px;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(13, 13, 18, 0.9) 0%, rgba(13, 13, 18, 0.7) 100%), 
+                        url('https://riseclient.com/assets/images/background.webp') no-repeat center center;
+            background-size: cover;
+        }
+        
+        .client-title {
+            font-size: 48px;
+            font-weight: 700;
+            margin: 0 0 10px;
+        }
+        
+        .client-title span {
+            color: var(--primary);
+            font-style: italic;
+        }
+        
+        .beta-tag {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--darker);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        
+        .client-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 5%;
+        }
+        
+        .download-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 60px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 32px;
+            border-radius: 8px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: var(--darker);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(255, 102, 178, 0.3);
+        }
+    </style>
 </head>
 <body>
-    <nav>
-        <a href="index.html" class="back-button">← Back to myass</a>
-        <span class="platform-name">citric@myass</span>
-    </nav>
-
     <header class="client-header">
-        <h1>citric<span class="at-myass">@myass</span></h1>
-        <p class="version">v1.0.0-beta</p>
+        <h1 class="client-title">citric<span>@myass</span> <span class="beta-tag">CLOSED BETA</span></h1>
+        <p>Advanced combat enhancement suite for Minecraft 1.8.9</p>
     </header>
-
-    <section class="client-details">
-        <div class="requirements">
-            <h3>Requirements</h3>
-            <ul>
-                <li>Minecraft 1.8.9</li>
-                <li>Java 8+</li>
-                <li>Beta access key</li>
-            </ul>
+    
+    <section class="client-content">
+        <div class="download-box">
+            <h2>Apply for Beta Access</h2>
+            <p>citric is currently in closed testing. Join our Discord to apply.</p>
+            <a href="#" class="btn btn-primary">Join Discord</a>
+            <p><small>Approval required - test your skills first</small></p>
         </div>
-
-        <div class="download-area">
-            <div class="status-badge closed-beta">BETA LOCKED</div>
-            <p>Complete verification on our Discord to unlock</p>
-            <button class="verify-button">Verify Access</button>
-        </div>
-    </section>
-
-    <section class="features">
-        <h2>Features</h2>
-        <div class="feature-grid">
-            <div class="feature">
-                <h3>Aim Correction</h3>
-                <p>Subtle assistance for optimal tracking</p>
-            </div>
-            <div class="feature">
-                <h3>Motion Analysis</h3>
-                <p>Predicts enemy movement patterns</p>
-            </div>
+        
+        <div class="features">
+            <h2>Features</h2>
+            <!-- Feature list would go here -->
         </div>
     </section>
 </body>
