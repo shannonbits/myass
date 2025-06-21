@@ -1,167 +1,142 @@
-/* myass Client - Main Stylesheet */
+/* ===== BASE STYLES ===== */
 :root {
-  --primary: #FF66B2; /* Hot pink */
-  --secondary: #9933FF; /* Purple */
-  --dark: #121212;
-  --darker: #0a0a0a;
-  --light: #f1f1f1;
-  --accent: #00ff88;
+    --primary: #ff66b2;
+    --secondary: #9933ff;
+    --dark: #121212;
+    --darker: #080808;
+    --light: #f0f0f0;
 }
 
-/* Base Styles */
 body {
-  background-color: var(--dark);
-  color: var(--light);
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  overflow-x: hidden;
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--dark);
+    color: var(--light);
+    margin: 0;
+    line-height: 1.6;
 }
 
-@font-face {
-  font-family: 'Inter';
-  src: url('../assets/fonts/Inter.woff2') format('woff2');
+/* ===== TYPOGRAPHY ===== */
+h1, h2, h3 {
+    font-weight: 700;
 }
 
-/* Header Styles */
-.header {
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  padding: 5rem 2rem;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+.at-myass {
+    color: var(--primary);
+    font-style: italic;
 }
 
-.header::after {
-  content: "( ͡° ͜ʖ ͡°)";
-  position: absolute;
-  bottom: 20px;
-  right: 30px;
-  font-size: 1.5rem;
-  opacity: 0.3;
-}
-
-.logo {
-  font-size: 5rem;
-  font-weight: 900;
-  margin: 0;
-  background: linear-gradient(to right, #fff 20%, var(--accent) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 20px rgba(153, 51, 255, 0.3);
-}
-
-.subtitle {
-  font-size: 1.5rem;
-  opacity: 0.9;
-  margin-top: 1rem;
-  font-weight: 300;
-}
-
-/* Button Styles */
-.cta-button {
-  background: var(--darker);
-  color: white;
-  padding: 1rem 3rem;
-  border-radius: 50px;
-  font-weight: bold;
-  display: inline-block;
-  margin-top: 2rem;
-  text-decoration: none;
-  font-size: 1.2rem;
-  transition: all 0.3s ease;
-  border: 2px solid rgba(255,255,255,0.1);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-.cta-button:hover {
-  background: black;
-  transform: translateY(-3px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
-}
-
-.download-button {
-  background: var(--accent);
-  color: var(--darker);
-  padding: 1.2rem 4rem;
-  border-radius: 50px;
-  font-weight: 800;
-  display: inline-block;
-  margin: 2rem 0;
-  text-decoration: none;
-  font-size: 1.3rem;
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.download-button:hover {
-  transform: scale(1.05) translateY(-3px);
-  box-shadow: 0 20px 40px rgba(0, 255, 136, 0.3);
-}
-
-/* Feature Cards */
-.features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  padding: 5rem 10%;
-}
-
-.feature {
-  background: rgba(255,255,255,0.03);
-  border-radius: 15px;
-  padding: 2rem;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(255,255,255,0.05);
-}
-
-.feature:hover {
-  transform: translateY(-10px);
-  background: rgba(255,255,255,0.05);
-  border-color: var(--primary);
-}
-
-/* Funny Easter Egg */
-.easter-egg {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  font-size: 0.8rem;
-  opacity: 0.1;
-  transition: opacity 0.3s ease;
-}
-
-.easter-egg:hover {
-  opacity: 1;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .logo {
-    font-size: 3rem;
-  }
-  
-  .subtitle {
+.tagline {
+    opacity: 0.8;
     font-size: 1.2rem;
-  }
-  
-  .features {
-    padding: 3rem 5%;
-  }
 }
 
-/* Animations */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
+/* ===== NAVIGATION ===== */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 5%;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-.floating {
-  animation: float 6s ease-in-out infinite;
+.platform-name {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.nav-button, .back-button {
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.nav-button {
+    background: var(--primary);
+    color: white;
+}
+
+.back-button {
+    color: var(--light);
+}
+
+/* ===== CLIENT CARDS ===== */
+.client-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.client-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.closed-beta {
+    background: #ff4757;
+    color: white;
+}
+
+/* ===== BUTTONS ===== */
+.discord-button, .verify-button {
+    background: #5865F2;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background 0.3s ease;
+}
+
+.discord-button:hover, .verify-button:hover {
+    background: #4752c4;
+}
+
+/* ===== LAYOUT ===== */
+header {
+    text-align: center;
+    padding: 4rem 5%;
+}
+
+.client-showcase, .beta-application {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 5%;
+}
+
+.beta-application {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.test-instructions {
+    text-align: left;
+    display: inline-block;
+    margin: 1rem auto;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .platform-name {
+        margin-bottom: 1rem;
+    }
 }
