@@ -3,42 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>myass | Minecraft Client Platform</title>
-    <link rel="stylesheet" href="main.css">
+    <title>myass | Premium Minecraft Utilities</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap">
+    <style>
+        :root {
+            --primary: #FF66B2;
+            --secondary: #9933FF;
+            --dark: #0D0D12;
+            --darker: #08080C;
+            --light: #F0F0F5;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--dark);
+            color: var(--light);
+            margin: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            position: fixed;
+            width: 90%;
+            z-index: 100;
+            background: rgba(13, 13, 18, 0.8);
+            backdrop-filter: blur(10px);
+        }
+        
+        .logo {
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--light);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--primary);
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 10%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(153, 51, 255, 0.1) 0%, rgba(13, 13, 18, 0) 70%);
+            z-index: -1;
+        }
+        
+        .hero-content {
+            max-width: 600px;
+        }
+        
+        h1 {
+            font-size: 64px;
+            font-weight: 700;
+            margin: 0 0 20px;
+            background: linear-gradient(90deg, var(--light) 0%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .subtitle {
+            font-size: 20px;
+            opacity: 0.8;
+            margin-bottom: 40px;
+        }
+        
+        /* Client Card */
+        .client-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 30px;
+            width: 300px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .client-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(255, 102, 178, 0.1);
+        }
+        
+        .client-name {
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0 0 10px;
+        }
+        
+        .client-name span {
+            color: var(--primary);
+            font-style: italic;
+        }
+        
+        .beta-badge {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--darker);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 12px 32px;
+            border-radius: 8px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: var(--darker);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(255, 102, 178, 0.3);
+        }
+        
+        .btn-outline {
+            border: 1px solid var(--light);
+            color: var(--light);
+        }
+        
+        /* Grid Layout */
+        .grid {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 100px 10%;
+        }
+    </style>
 </head>
 <body>
-    <nav>
-        <span class="platform-name">myass</span>
-        <a href="#beta" class="nav-button">Apply for Beta</a>
+    <nav class="navbar">
+        <a href="#" class="logo">my<span>ass</span></a>
+        <div>
+            <a href="#" class="btn btn-outline">Discord</a>
+        </div>
     </nav>
 
-    <header>
-        <h1>myass <span class="beta-badge">BETA</span></h1>
-        <p class="tagline">A platform for <em>select</em> Minecraft utilities</p>
-    </header>
-
-    <section class="client-showcase">
-        <div class="client-card" onclick="location.href='citric.html'">
-            <h2>citric<span class="at-myass">@myass</span></h2>
-            <p class="client-description">Precision combat utility for 1.8.9</p>
-            <div class="status-badge closed-beta">CLOSED BETA</div>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>myass utilities</h1>
+            <p class="subtitle">High-performance Minecraft enhancements with a memorable name</p>
+            <a href="#clients" class="btn btn-primary">Explore Clients</a>
         </div>
     </section>
 
-    <section id="beta" class="beta-application">
-        <h2>Want citric<span class="at-myass">@myass</span>?</h2>
-        <p>Complete the test for beta access:</p>
-        <ol class="test-instructions">
-            <li>Join our Discord</li>
-            <li>Solve the captcha</li>
-            <li>Complete the verification form</li>
-        </ol>
-        <button class="discord-button">Join Discord</button>
+    <section id="clients" class="grid">
+        <div class="client-card" onclick="location.href='citric.html'">
+            <h2 class="client-name">citric<span>@myass</span> <span class="beta-badge">BETA</span></h2>
+            <p>Precision combat utility for competitive play</p>
+            <p><small>Requires application approval</small></p>
+        </div>
+        
+        <!-- More client cards can be added here -->
     </section>
-
-    <footer>
-        <p>myass platform © 2024 | Not affiliated with Mojang or Microsoft</p>
-        <p class="disclaimer">All clients are provided "as is" for educational purposes</p>
-    </footer>
 </body>
 </html>
